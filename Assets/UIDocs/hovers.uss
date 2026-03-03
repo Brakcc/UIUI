@@ -1,0 +1,17 @@
+.unity-button:hover {
+    background-color: rgb(255, 0, 0);
+    rotate: 2deg;
+    scale: 1.1 1.1 1.1;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.05s;
+}
+
+.unity-button {
+    rotate: -2deg;
+    transition-duration: 0.05s;
+}
+
+.unity-button:active {
+    scale: 1 1;
+    background-color: rgb(123, 0, 0);
+}
