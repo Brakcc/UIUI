@@ -1,15 +1,31 @@
 .unity-button {
-    rotate: -2deg;
-    transition-duration: 0.05s;
+    rotate: 0;
+    transition-duration: 0.2s;
     -unity-material: url("");
+    border-left-width: 0;
+    border-right-width: 0;
+    border-top-width: 0;
+    border-bottom-width: 0;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-right: 0;
+    padding-left: 0;
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
 }
 
 .unity-button:hover {
     background-color: rgb(255, 0, 0);
-    rotate: 2deg;
+    rotate: 0;
     scale: 1.1 1.1 1.1;
     transition-timing-function: ease-in-out, ease;
-    transition-duration: 0.05s, 0s;
+    transition-duration: 0.2s, 0s;
     -unity-material: url("");
     transition-property: all, -unity-material;
 }
@@ -17,4 +33,35 @@
 .unity-button:active {
     scale: 1 1;
     background-color: rgb(123, 0, 0);
+    transition-duration: 0.1s;
+}
+
+.inner {
+    rotate: -2deg;
+    background-color: rgb(231, 149, 149);
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    border-bottom-right-radius: 11px;
+    border-bottom-left-radius: 11px;
+    border-top-width: 6px;
+    border-right-width: 6px;
+    border-bottom-width: 6px;
+    border-left-width: 6px;
+    border-left-color: rgb(255, 131, 131);
+    border-right-color: rgb(255, 131, 131);
+    border-top-color: rgb(255, 131, 131);
+    border-bottom-color: rgb(255, 131, 131);
+    transition-duration: 0.2s;
+}
+
+.inner:hover {
+    rotate: 2deg;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.2s;
+}
+
+.inner:active {
+    rotate: 0;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.1s;
 }

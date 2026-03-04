@@ -29,7 +29,7 @@ namespace Runtime
         {
             _root = root;
             
-            _aButton = root.Q<Button>("A");
+            _aButton = root.Q<Button>("Settings");
             _aButton.RegisterCallback<ClickEvent>(A);
         }
         
@@ -41,7 +41,7 @@ namespace Runtime
         {
             Debug.Log("AAAAAAAAAAAAAAAAAAAAAAAAAA");
 
-            _root[0][1][0][1].visible = !_root[0][1][0][1].visible;
+            _root[0][1][0][1].enabledSelf = !_root[0][1][0][1].enabledSelf;
         }
         
         #endregion

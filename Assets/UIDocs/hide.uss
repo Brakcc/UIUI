@@ -1,8 +1,24 @@
 .hide {
-    display: flex;
-    visibility: hidden;
+    position: absolute;
+    transition-property: ignored;
 }
 
+.hide:enabled {
+    transition-duration: 0.3s, 0s;
+    position: absolute;
+    top: 250px;
+    left: 150px;
+    transition-timing-function: ease-in-out, ease-in;
+    transition-property: top, visibility;
+}
 
-
-
+.hide:disabled {
+    visibility: hidden;
+    transition-duration: 0.3s, 0s;
+    position: absolute;
+    top: 500px;
+    left: 150px;
+    transition-timing-function: ease-in-out, ease-out;
+    transition-property: top, visibility;
+    transition-delay: 0s, 0.3s;
+}
