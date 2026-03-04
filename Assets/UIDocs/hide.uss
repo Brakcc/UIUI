@@ -6,8 +6,8 @@
 .hide:enabled {
     transition-duration: 0.3s, 0s;
     position: absolute;
-    top: 250px;
-    left: 150px;
+    top: 0;
+    left: 0;
     transition-timing-function: ease-in-out, ease-in;
     transition-property: top, visibility;
 }
@@ -16,8 +16,8 @@
     visibility: hidden;
     transition-duration: 0.3s, 0s;
     position: absolute;
-    top: 500px;
-    left: 150px;
+    top: 0;
+    left: -478px;
     transition-timing-function: ease-in-out, ease-out;
     transition-property: top, visibility;
     transition-delay: 0s, 0.3s;
