@@ -22,6 +22,9 @@ namespace Runtime
             _backFromModesButton?.UnregisterCallback<ClickEvent>(SelectMode);
             _settingsButton?.UnregisterCallback<ClickEvent>(Settings);
             _backFromSettingsButton?.UnregisterCallback<ClickEvent>(Settings);
+            _soloButton?.UnregisterCallback<ClickEvent>(SetModeSolo);
+            _onlineButton?.UnregisterCallback<ClickEvent>(SetModeOnline);
+            _startGameButton?.UnregisterCallback<ClickEvent>(StartGame);
         }
 
         #endregion
@@ -51,6 +54,9 @@ namespace Runtime
             
             _onlineButton = root.Q<Button>("Multi");
             _onlineButton.RegisterCallback<ClickEvent>(SetModeOnline);
+            
+            _startGameButton = root.Q<Button>("StartGame");
+            _startGameButton.RegisterCallback<ClickEvent>(StartGame);
         }
         
         #endregion
@@ -61,9 +67,14 @@ namespace Runtime
         {
             _root[0].enabledSelf = !_root[0].enabledSelf;
             _root[2].enabledSelf = !_root[2].enabledSelf;
+
+            if (_root[2].enabledSelf)
+                return;
             
-            if (!_root[2].enabledSelf)
-                _modeLabel.text = "Mode ?";
+            _modeLabel.text = "Mode ?";
+            _modeLabel.style.fontSize = 145;
+            _modeLabel.style.color = Color.white;
+            _currentMode = 0;
         }
         
         private void Settings(ClickEvent evt)
@@ -75,12 +86,34 @@ namespace Runtime
         private void SetModeSolo(ClickEvent evt)
         {
             _modeLabel.text = "Solo !";
+            _modeLabel.style.color = Color.white;
+            _modeLabel.style.fontSize = 145;
+            _currentMode = 1;
         }
 
         private void SetModeOnline(ClickEvent evt)
         {
             _modeLabel.text = "Online !";
+            _modeLabel.style.color = Color.white;
+            _modeLabel.style.fontSize = 145;
+            _currentMode = 2;
         }
+
+        private void StartGame(ClickEvent evt)
+        {
+            if (!CheckIfMode())
+            {
+                _modeLabel.text = "No mode selected !";
+                _modeLabel.style.color = Color.red;
+                _modeLabel.style.fontSize = 70;
+                return;
+            }
+
+            var t = _currentMode == 1 ? "Solo" : "Online";
+            Debug.Log($"Start Game ! : Mode : {t}");
+        }
+
+        private bool CheckIfMode() => _currentMode != 0;
         
         #endregion
 
@@ -104,7 +137,11 @@ namespace Runtime
         
         private Button _onlineButton;
         
+        private Button _startGameButton;
+        
         private Label _modeLabel;
+        
+        private int _currentMode;
 
         #endregion
     }
