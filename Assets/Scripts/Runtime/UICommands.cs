@@ -31,9 +31,10 @@ namespace Runtime
         
         #region setup
         
-        private void OnUIReload(PanelRenderer renderer, VisualElement root)
+        private void OnUIReload(PanelRenderer panel, VisualElement root)
         {
             _root = root;
+            _panel = panel;
             
             _modeLabel = root.Q<Label>("Mode");
             
