@@ -400,7 +400,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1931382934 &578037227
 PanelRenderer:
   m_ObjectHideFlags: 0
@@ -545,6 +545,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1164285188}
   - component: {fileID: 1164285187}
+  - component: {fileID: 1164285189}
   m_Layer: 5
   m_Name: Acces
   m_TagString: Untagged
@@ -602,7 +603,7 @@ PanelRenderer:
   m_MaskInteraction: 0
   serializedVersion: 1
   m_PanelSettings: {fileID: 11400000, guid: c92186f8764d0864389727741d08cd80, type: 2}
-  sourceAsset: {fileID: 0}
+  sourceAsset: {fileID: 9197481963319205126, guid: 229e6c31067d0bd49bca6cab6f7e17b9, type: 3}
   m_ParentUI: {fileID: 0}
   m_WorldSpaceSizeMode: 1
   m_WorldSpaceWidth: 1920
@@ -625,6 +626,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1164285189
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1164285186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b7fd2812e34457d8ec641530ecd571f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: UIUI.Runtime::Runtime.UIAccessibility
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

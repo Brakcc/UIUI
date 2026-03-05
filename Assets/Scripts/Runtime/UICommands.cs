@@ -112,6 +112,7 @@ namespace Runtime
 
             var t = _currentMode == 1 ? "Solo" : "Online";
             Debug.Log($"Start Game ! : Mode : {t}");
+            //_root[3].visible = !_root[3].visible;
         }
 
         private bool CheckIfMode() => _currentMode != 0;
