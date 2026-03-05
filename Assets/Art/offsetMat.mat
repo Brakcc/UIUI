@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: o
+  m_Name: offsetMat
   m_Shader: {fileID: -6465566751694194690, guid: 9f31f64e938a19342a94313e6b64af66, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
