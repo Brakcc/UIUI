@@ -17,6 +17,9 @@ namespace Runtime
         private void OnDisable()
         {
             GetComponent<PanelRenderer>().UnregisterUIReloadCallback(OnReloadUI);
+            
+            _settingsButton.UnregisterCallback<ClickEvent>(Settings);
+            _backButton.UnregisterCallback<ClickEvent>(Settings);
         }
         
         #endregion
@@ -27,6 +30,21 @@ namespace Runtime
         {
             _root = root;
             _panel = panel;
+            
+            _settingsButton = root.Q<Button>("Settings");
+            _settingsButton.RegisterCallback<ClickEvent>(Settings);
+            
+            _backButton = root.Q<Button>("BackFromSettings");
+            _backButton.RegisterCallback<ClickEvent>(Settings);
+        }
+
+        #endregion
+        
+        #region commands
+
+        private void Settings(ClickEvent evt)
+        {
+            _root[1].enabledSelf = !_root[1].enabledSelf;
         }
 
         #endregion
@@ -38,6 +56,10 @@ namespace Runtime
         private PanelRenderer _panel;
         
         private VisualElement _root;
+
+        private Button _settingsButton;
+
+        private Button _backButton;
 
         #endregion
     }
