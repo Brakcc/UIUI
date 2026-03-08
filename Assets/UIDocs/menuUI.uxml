@@ -1,0 +1,12 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <ui:Template name="gamePanel" src="project://database/Assets/UIDocs/GamePanels/gamePanel.uxml?fileID=9197481963319205126&amp;guid=5b2dd08fa4506044aa0a18962c9fff8e&amp;type=3#gamePanel"/>
+    <ui:Template name="mainPanel" src="project://database/Assets/UIDocs/MainPanels/mainPanel.uxml?fileID=9197481963319205126&amp;guid=47aaf02358ebe3243bdd17d8edf0c5ea&amp;type=3#mainPanel"/>
+    <ui:Template name="settingsPanel" src="project://database/Assets/UIDocs/SettingsPanels/settingsPanel.uxml?fileID=9197481963319205126&amp;guid=f8081ae21322db441bfe9d59dfd5c571&amp;type=3#settingsPanel"/>
+    <Style src="project://database/Assets/UIDocs/USSs/hide.uss?fileID=7433441132597879392&amp;guid=663cf6c6b43817a4d97ce4c3b894387d&amp;type=3#hide"/>
+    <Style src="project://database/Assets/UIDocs/USSs/hovers.uss?fileID=7433441132597879392&amp;guid=f1cd3ab216a842649bf8774475ef2b54&amp;type=3#hovers"/>
+    <Style src="project://database/Assets/UIDocs/USSs/texts.uss?fileID=7433441132597879392&amp;guid=c709bb064f23e4d4592865d8ceb9bae8&amp;type=3#texts"/>
+    <Style src="project://database/Assets/UIDocs/USSs/switch.uss?fileID=7433441132597879392&amp;guid=9b01279392169504eb537fcbb189ec92&amp;type=3#switch"/>
+    <ui:Instance template="mainPanel"/>
+    <ui:Instance template="settingsPanel" enabled="false"/>
+    <ui:Instance template="gamePanel" enabled="false"/>
+</ui:UXML>

@@ -1,4 +1,6 @@
+using Runtime.CustomElements;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UIElements;
 
 namespace Runtime
@@ -25,6 +27,10 @@ namespace Runtime
             _soloButton?.UnregisterCallback<ClickEvent>(SetModeSolo);
             _onlineButton?.UnregisterCallback<ClickEvent>(SetModeOnline);
             _startGameButton?.UnregisterCallback<ClickEvent>(StartGame);
+            _quitGameButton?.UnregisterCallback<ClickEvent>(QuitGame);
+            _masterSlider?.UnregisterCallback<ChangeEvent<float>>(SetMasterVolume);
+            _musicSlider?.UnregisterCallback<ChangeEvent<float>>(SetMusicVolume);
+            _fullScreen.Toggled -= SetFullscreen;
         }
 
         #endregion
@@ -58,6 +64,18 @@ namespace Runtime
             
             _startGameButton = root.Q<Button>("StartGame");
             _startGameButton.RegisterCallback<ClickEvent>(StartGame);
+            
+            _quitGameButton = root.Q<Button>("Quit");
+            _quitGameButton.RegisterCallback<ClickEvent>(QuitGame);
+            
+            _masterSlider = root.Q<Slider>("Master");
+            _masterSlider.RegisterCallback<ChangeEvent<float>>(SetMasterVolume);
+            
+            _musicSlider = root.Q<Slider>("Music");
+            _musicSlider.RegisterCallback<ChangeEvent<float>>(SetMusicVolume);
+
+            _fullScreen = root.Q<CustomSlider>("Fullscreen");
+            _fullScreen.Toggled += SetFullscreen;
         }
         
         #endregion
@@ -112,7 +130,31 @@ namespace Runtime
 
             var t = _currentMode == 1 ? "Solo" : "Online";
             Debug.Log($"Start Game ! : Mode : {t}");
-            //_root[3].visible = !_root[3].visible;
+        }
+
+        private void QuitGame(ClickEvent evt)
+        {
+            Debug.Log("Quit Game !");
+            Application.Quit();
+            
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#endif
+        }
+
+        private void SetMasterVolume(ChangeEvent<float> evt)
+        {
+            audioMixer.SetFloat("master", evt.newValue);
+        }
+        
+        private void SetMusicVolume(ChangeEvent<float> evt)
+        {
+            audioMixer.SetFloat("music", evt.newValue);
+        }
+
+        private static void SetFullscreen(bool value)
+        {
+            Screen.fullScreen = value;
         }
 
         private bool CheckIfMode() => _currentMode != 0;
@@ -123,6 +165,8 @@ namespace Runtime
 
         #region fields
 
+        [SerializeField] private AudioMixer audioMixer;
+        
         private PanelRenderer _panel;
         
         private VisualElement _root;
@@ -140,8 +184,18 @@ namespace Runtime
         private Button _onlineButton;
         
         private Button _startGameButton;
+
+        private Button _quitGameButton;
         
         private Label _modeLabel;
+        
+        private Slider _masterSlider;
+        
+        private Slider _musicSlider;
+
+        private Slider _sfxSlider;
+        
+        private CustomSlider _fullScreen;
         
         private int _currentMode;
 

@@ -1,7 +1,10 @@
 @import url("/Assets/UI Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss");
 
-@import url("hide.uss");
-@import url("hovers.uss");
-@import url("texts.uss");
+@import url("USSs/hide.uss");
+@import url("USSs/hovers.uss");
+@import url("USSs/texts.uss");
+@import url("USSs/switch.uss");
+
+
 
 VisualElement {}

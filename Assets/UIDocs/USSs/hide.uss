@@ -1,0 +1,36 @@
+.hide {
+    position: absolute;
+    transition-property: ignored;
+}
+
+.hide:enabled {
+    transition-duration: 0.3s, 0s;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition-timing-function: ease-in-out, ease-in;
+    transition-property: left, visibility;
+}
+
+.hide:disabled {
+    visibility: hidden;
+    transition-duration: 0.3s, 0s;
+    position: absolute;
+    top: 0;
+    left: -760px;
+    transition-timing-function: ease-in-out, ease-out;
+    transition-property: left, visibility;
+    transition-delay: 0s, 0.3s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
