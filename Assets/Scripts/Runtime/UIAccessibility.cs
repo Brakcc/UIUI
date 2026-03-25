@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.UIElements;
 
 namespace Runtime
@@ -45,6 +46,35 @@ namespace Runtime
         private void Settings(ClickEvent evt)
         {
             _root[1].enabledSelf = !_root[1].enabledSelf;
+            _root[0].enabledSelf = !_root[0].enabledSelf;
+        }
+
+        private void StartGame()
+        {
+            Debug.Log("Starting game");
+        }
+
+        private void QuitGame()
+        {
+            Application.Quit();
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#endif
+        }
+        
+        private void SetMasterVolume(ChangeEvent<float> evt)
+        {
+            audioMixer.SetFloat("master", evt.newValue);
+        }
+        
+        private void SetMusicVolume(ChangeEvent<float> evt)
+        {
+            audioMixer.SetFloat("music", evt.newValue);
+        }
+
+        private static void SetFullscreen(bool value)
+        {
+            Screen.fullScreen = value;
         }
 
         #endregion
@@ -53,6 +83,8 @@ namespace Runtime
 
         #region fields
 
+        [SerializeField] private AudioMixer audioMixer;
+        
         private PanelRenderer _panel;
         
         private VisualElement _root;

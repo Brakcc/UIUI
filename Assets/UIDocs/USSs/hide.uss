@@ -23,6 +23,36 @@
     transition-delay: 0s, 0.3s;
 }
 
+.hideScreen {
+    position: absolute;
+    transition-property: ignored;
+}
+
+.hideScreen:enabled {
+    transition-property: left, visibility;
+    transition-duration: 0.3s, 0s;
+    transition-timing-function: ease-in-out, ease-in;
+    left: 0;
+    position: absolute;
+}
+
+.hideScreen:disabled {
+    transition-property: left, visibility;
+    transition-duration: 0.3s, 0s;
+    transition-timing-function: ease-in-out, ease-out;
+    left: -1920px;
+    transition-delay: 0s, 0.3s;
+    position: absolute;
+    top: 0;
+    visibility: hidden;
+}
+
+
+
+
+
+
+
 
 
 

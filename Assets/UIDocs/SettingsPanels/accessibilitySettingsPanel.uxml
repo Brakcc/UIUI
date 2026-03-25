@@ -1,0 +1,37 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UIDocs/USSs/hide.uss?fileID=7433441132597879392&amp;guid=663cf6c6b43817a4d97ce4c3b894387d&amp;type=3#hide"/>
+    <Style src="project://database/Assets/UIDocs/USSs/hovers.uss?fileID=7433441132597879392&amp;guid=f1cd3ab216a842649bf8774475ef2b54&amp;type=3#hovers"/>
+    <Style src="project://database/Assets/UIDocs/USSs/texts.uss?fileID=7433441132597879392&amp;guid=c709bb064f23e4d4592865d8ceb9bae8&amp;type=3#texts"/>
+    <Style src="project://database/Assets/UIDocs/USSs/panels.uss?fileID=7433441132597879392&amp;guid=dae8d2468d4876d4c91b6bc3d0d4f93a&amp;type=3#panels"/>
+    <Style src="project://database/Assets/UIDocs/USSs/access.uss?fileID=7433441132597879392&amp;guid=9f661d15db24dc747bdb84857a5473f4&amp;type=3#access"/>
+    <ui:VisualElement name="" class="hideScreen outerpanel" style="flex-grow: 1; background-color: rgb(255, 255, 255); position: relative; margin-left: 50px; margin-top: 50px; margin-right: 50px; margin-bottom: 50px; flex-direction: row;">
+        <ui:VisualElement style="width: 888px;">
+            <ui:ScrollView name="ScrollView">
+                <ui:VisualElement class="innerpanel" style="flex-grow: 1;">
+                    <ui:Label text="Sound&#10;" class="accessTitle"/>
+                    <ui:Slider label="Master" value="42" high-value="0" low-value="-80" name="Master" class="bigSlider"/>
+                    <ui:Slider label="Music" value="42" high-value="0" low-value="-80" name="Music" class="bigSlider"/>
+                    <ui:Slider label="SFX" value="42" high-value="0" low-value="-80" name="SFX" class="bigSlider"/>
+                    <ui:Slider label="Voice" value="42" high-value="0" low-value="-80" name="Voice" class="bigSlider"/>
+                    <ui:Slider label="TTS" value="42" high-value="0" low-value="-80" name="TTS" class="bigSlider"/>
+                </ui:VisualElement>
+                <ui:VisualElement class="innerpanel" style="flex-grow: 1;">
+                    <ui:Label text="Screen&#10;" class="accessTitle"/>
+                    <Runtime.CustomElements.AccessibleToggle/>
+                </ui:VisualElement>
+                <ui:VisualElement class="innerpanel" style="flex-grow: 1;">
+                    <ui:Label text="Text" class="accessTitle"/>
+                    <ui:Slider label="Text Size" value="42" high-value="100" class="bigSlider"/>
+                    <Runtime.CustomElements.AccessibleToggle text="TTS"/>
+                    <Runtime.CustomElements.AccessibleToggle text="Subtitles"/>
+                </ui:VisualElement>
+            </ui:ScrollView>
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1;">
+            <ui:VisualElement class="innerpanel" style="flex-grow: 1; margin-bottom: 32px;">
+                <ui:Label text="LOREM IPSUM&#10;" class="accessTitle"/>
+                <ui:Label text="Vous savez, moi je ne crois pas qu&apos;il y ait de bonne ou de mauvaise situation. Moi, si je devais résumer ma vie aujourd&apos;hui avec vous, je dirais que c&apos;est d&apos;abord des rencontres. Des gens qui m&apos;ont tendu la main, peut-être à un moment où je ne pouvais pas, où j&apos;étais seul chez moi. Et c&apos;est assez curieux de se dire que les hasards, les rencontres, forgent une destinée... Parce que quand on a le goût de la chose, quand on a le goût de la chose bien faite, le beau geste, parfois on ne trouve pas l&apos;interlocuteur en face je dirais, le miroir qui vous aide à avancer. Alors ça n&apos;est pas mon cas, comme je disais là, puisque moi au contraire, j&apos;ai pu : et je dis merci à la vie, je lui dis merci, je chante la vie, je danse la vie... je ne suis qu&apos;amour ! Et finalement, quand beaucoup de gens aujourd&apos;hui me disent « Mais comment fais-tu pour avoir cette humanité ? », et bien je leur réponds très simplement, je leur dis que c&apos;est ce goût de l&apos;amour ce goût donc qui m&apos;a poussé aujourd&apos;hui à entreprendre une construction mécanique, mais demain qui sait ? Peut-être simplement à me mettre au service de la communauté, à faire le don, le don de soi..." style="height: 342px; white-space: pre-wrap; margin-top: 22px; margin-right: 22px; margin-bottom: 22px; margin-left: 22px;"/>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

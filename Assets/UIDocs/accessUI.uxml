@@ -1,0 +1,10 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="accessibilityMainPanel" src="project://database/Assets/UIDocs/MainPanels/accessibilityMainPanel.uxml?fileID=9197481963319205126&amp;guid=229e6c31067d0bd49bca6cab6f7e17b9&amp;type=3#accessibilityMainPanel"/>
+    <ui:Template name="accessibilitySettingsPanel" src="project://database/Assets/UIDocs/SettingsPanels/accessibilitySettingsPanel.uxml?fileID=9197481963319205126&amp;guid=d15d4256d001634418e616179ae15c5f&amp;type=3#accessibilitySettingsPanel"/>
+    <Style src="project://database/Assets/UIDocs/USSs/hide.uss?fileID=7433441132597879392&amp;guid=663cf6c6b43817a4d97ce4c3b894387d&amp;type=3#hide"/>
+    <Style src="project://database/Assets/UIDocs/USSs/hovers.uss?fileID=7433441132597879392&amp;guid=f1cd3ab216a842649bf8774475ef2b54&amp;type=3#hovers"/>
+    <Style src="project://database/Assets/UIDocs/USSs/switch.uss?fileID=7433441132597879392&amp;guid=9b01279392169504eb537fcbb189ec92&amp;type=3#switch"/>
+    <Style src="project://database/Assets/UIDocs/USSs/texts.uss?fileID=7433441132597879392&amp;guid=c709bb064f23e4d4592865d8ceb9bae8&amp;type=3#texts"/>
+    <ui:Instance template="accessibilityMainPanel" style="position: absolute; width: 1920px; height: 1080px;"/>
+    <ui:Instance template="accessibilitySettingsPanel" enabled="false" style="position: absolute; width: 1920px; height: 1080px;"/>
+</ui:UXML>
