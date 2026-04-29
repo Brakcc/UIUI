@@ -222,6 +222,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b7fd2812e34457d8ec641530ecd571f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UIUI.Runtime::Runtime.UIAccessibility
+  audioMixer: {fileID: 24100000, guid: 04f5f3f72cd84fd4a92ceef318bc48ca, type: 2}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
